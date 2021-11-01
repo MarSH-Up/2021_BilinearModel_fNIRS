@@ -1,1 +1,1 @@
-# 2021_BilinearModel_fNIRS
+# Bilinear Model
