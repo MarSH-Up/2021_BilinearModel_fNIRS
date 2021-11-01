@@ -36,7 +36,8 @@ freq = 10.4;
     [Sj,Vj,qj,pj] = BilinearModel_Hemodynamics_Naive_v2(Z, U_stimulus, P_SD, A, step);
     %%
     %OPTICS
-    [Y] = BilinearModel_Optics_Naive(pj, qj,U_stimulus,A);
+    Noise = 0.4;
+    [Y] = BilinearModel_Optics_Naive(pj, qj,U_stimulus,A, Noise);
     %%
     %Just plotting
     figure;
