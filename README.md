@@ -1,1 +1,2 @@
-# Bilinear Model
+# Bilinear Neurovascular Model
+
