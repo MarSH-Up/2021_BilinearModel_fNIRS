@@ -39,7 +39,7 @@ The code (kind of) follows the OOPs philosophy, and of course, it can be improve
 2. Neurodynamics; Neural activity of the inter-regions interactions (Check Friston,2003). Basically, you will have the neural response of each region defined in your connectivity matrixes (We are using here the proposed by S.Tak). How to use it? Here we go.
   ```
   % Outputs; Z = Neurodynamics. Sized <nRegions x simulationLength> (Carefull with the nRegions, check the paper :D)
-  % Inputs; A = Latent connectivity. Square matrix. Sized <nRegions x nRegions>, B = Induced connectivity. Square matrix. Sized <nRegions x nRegions x         %         nStimulus>, C = Extrinsic influences of inputs on neuronal activity, U = Stimuli. Sized <nStimuli x nTimeSamples> (Previous function), and 
+  % Inputs; A = Latent connectivity. Square matrix. Sized <nRegions x nRegions>, B = Induced connectivity, Square matrix. Sized <nRegions x nRegions x         %         nStimulus>, C = Extrinsic influences of inputs on neuronal activity, U = Stimuli. Sized <nStimuli x nTimeSamples> (Previous function), and 
   %         step = Integration step (h using Euler Method, consider that we need to validate the h with mathematical rigor, We will update next months). 
 
   [Z] = BilinearModel_Neurodynamics_Z(A, B, C, U, step)
