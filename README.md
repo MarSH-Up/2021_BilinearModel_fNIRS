@@ -23,3 +23,11 @@ The following describes a big picture of the equations that represent the model.
   <img width="470" src="/Images/2021_BilinearModel.PNG">
 </p>
 
+
+## Using the Bilinear Model code
+
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
