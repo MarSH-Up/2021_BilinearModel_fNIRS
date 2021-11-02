@@ -1,6 +1,6 @@
 # Bilinear Neurovascular Model
 
-This repository implements the forward model proposed for STak in 2015 in the paper Dynamic Causal Modelling for FNIRS. The bilinear model presents a generative model of how interactions among hidden neuronal states cause observed fNIRS data. The exchange of the Ordinary Differential Equations are solved right now using the Euler Method: Zn+1 = Zn + h * f(Xn, Zn)
+This repository implements the forward model proposed for S.Tak in 2015 in the paper Dynamic Causal Modelling for FNIRS. The bilinear model presents a generative model of how interactions among hidden neuronal states cause observed fNIRS data. The exchange of the Ordinary Differential Equations are solved right now using the Euler Method: Zn+1 = Zn + h * f(Xn, Zn)
 
 
 ## Little background:
@@ -27,11 +27,20 @@ The following describes a big picture of the equations that represent the model.
 ## Using the Bilinear Model code
 
 The code (kind of) follows the OOPs philosophy, and of course, it can be improved.  Each stage brief described in the list is a function. You can find the requirements of each part in the source code, but here is an introduction:
-1. BilinearModel_StimulusTrainGenerator; This function creates the stimulus train U to feed the Neurodynamics stage. Right now, we make two identical stimuli. You can modify this function to generate the stimulus train your application needs. How to call it? 
+
+1. BilinearModel_StimulusTrainGenerator; This function creates the stimulus train U to feed the Neurodynamics stage. Right now, we make two identical stimuli. You can modify this function to generate the stimulus train your application needs. How I call it? 
   ```
   % Outputs; U will be your stimulus, and Timestamps= Time sequence for the stimulus train.
   % Inputs; Freq = Sampling Frequency, Action Time = Activition Time, Rest Time = Rest period, 
   %         and Cycles = Number of events per instruction (task period + rest period)
   
   [U, timestamps] = BilinearModel_StimulusTrainGenerator(freq, action_time, rest_time, cycles) 
+  ```
+2. Neurodynamics; Neural activity of the inter-regions interactions (Check Friston,2003). Basically, you will have the neural response of each region defined in your connectivity matrixes (We are using here the proposed by S.Tak). How to use it? Here we go.
+  ```
+  % Outputs; Z = Neurodynamics. Sized <nRegions x simulationLength> (Carefull with the nRegions, check the paper :D)
+  % Inputs; A = Latent connectivity. Square matrix. Sized <nRegions x nRegions>, B = Induced connectivity. Square matrix. Sized <nRegions x nRegions x         %         nStimulus>, C = Extrinsic influences of inputs on neuronal activity, U = Stimuli. Sized <nStimuli x nTimeSamples> (Previous function), and 
+  %         step = Integration step (h using Euler Method, consider that we need to validate the h with mathematical rigor, We will update next months). 
+
+  [Z] = BilinearModel_Neurodynamics_Z(A, B, C, U, step)
   ```
