@@ -29,8 +29,9 @@ The following describes a big picture of the equations that represent the model.
 The code (kind of) follows the OOPs philosophy, and of course, it can be improved.  Each stage brief described in the list is a function. You can find the requirements of each part in the source code, but here is an introduction:
 1. BilinearModel_StimulusTrainGenerator; This function creates the stimulus train U to feed the Neurodynamics stage. Right now, we make two identical stimuli. You can modify this function to generate the stimulus train your application needs. How to call it? 
   ```
-  %Outputs; U will be your stimulus, and Timestamps= Time sequence for the stimulus train.
-  %Inputs; Freq = Sampling Frequency, Action Time = Activition Time, Rest Time = Rest period, 
-  % and Cycles = Number of events per instruction (task period + rest period)
+  % Outputs; U will be your stimulus, and Timestamps= Time sequence for the stimulus train.
+  % Inputs; Freq = Sampling Frequency, Action Time = Activition Time, Rest Time = Rest period, 
+  %         and Cycles = Number of events per instruction (task period + rest period)
+  
   [U, timestamps] = BilinearModel_StimulusTrainGenerator(freq, action_time, rest_time, cycles) 
   ```
