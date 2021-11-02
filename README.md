@@ -18,4 +18,5 @@ The model is composed of three stages:
 
 
 The following describes a big picture of the equations that represent the model. All the rights are for S.Tak. I took the diagram from his paper. 
-![BL](/Images/2021_BilinearModel.PNG | width = 100)
+<img src="/Images/2021_BilinearModel.PNG " alt="alt text" width="100" >
+
