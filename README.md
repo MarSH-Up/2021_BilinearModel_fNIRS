@@ -69,4 +69,4 @@ NOTE: This images are the transformation of the rates to actual values, based-on
     <img width="230" src="/Images/Hemo_transform.png">
   </p>
   
-4.Optics; 
+4.Optics; optical density changes relating to hemodynamic sources generate on the hemodynamics function. We have a chain of things, We know. Also, we are still working on this function, which mainly tends to show negative optical values, considering that this model doesn't should considerer external luminescence, so we are working on that. 
