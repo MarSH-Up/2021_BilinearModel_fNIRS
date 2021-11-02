@@ -48,3 +48,6 @@ The code (kind of) follows the OOPs philosophy, and of course, it can be improve
 
   [Z] = BilinearModel_Neurodynamics_Z(A, B, C, U, step)
   ```
+  <p align="center">
+    <img width="470" src="/Images/Neurodynamics.png">
+  </p>
