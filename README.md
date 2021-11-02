@@ -1,6 +1,6 @@
 # Bilinear Neurovascular Model
 
-This repository implements the forward model proposed for STak in 2015 in the paper Dynamic Causal Modelling for FNIRS. The bilinear model presents a generative model of how interactions among hidden neuronal states cause observed fNIRS data. The exchange of the Ordinary Differential Equations are solved right now using the Euler Method: $Zn+1 = Zn + h * f(Xn, Zn)$
+This repository implements the forward model proposed for STak in 2015 in the paper Dynamic Causal Modelling for FNIRS. The bilinear model presents a generative model of how interactions among hidden neuronal states cause observed fNIRS data. The exchange of the Ordinary Differential Equations are solved right now using the Euler Method: $\Zn+1 = Zn + h * f(Xn, Zn)$
 
 
 ## Little background:
