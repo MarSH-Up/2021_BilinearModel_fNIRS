@@ -51,3 +51,5 @@ The code (kind of) follows the OOPs philosophy, and of course, it can be improve
   <p align="center">
     <img width="470" src="/Images/Neurodynamics.png">
   </p>
+
+3. Hemodynamics
