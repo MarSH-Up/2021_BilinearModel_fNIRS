@@ -66,5 +66,7 @@ The code (kind of) follows the OOPs philosophy, and of course, it can be improve
   </p>
 NOTE: This images are the transformation of the rates to actual values, based-on: 
   <p align="center">
-    <img width="300" src="/Images/Hemo_transform.png">
+    <img width="230" src="/Images/Hemo_transform.png">
   </p>
+  
+4.Optics; 
