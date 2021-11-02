@@ -61,6 +61,6 @@ The code (kind of) follows the OOPs philosophy, and of course, it can be improve
   [qj,pj] = BilinearModel_Hemodynamics_Naive_v2(Z, U, P_SD, A, Step)
   ```
   <p align="center">
-    <img width="470" src="/Images/M1_Hemo.png">
+    <img width="470" src="/Images/M1_HEMO.png">
     <img width="470" src="/Images/SMA_Hemo.png">
   </p>
