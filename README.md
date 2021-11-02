@@ -55,7 +55,12 @@ The code (kind of) follows the OOPs philosophy, and of course, it can be improve
 3. Hemodynamics;Total Hemoglobin and deoxyhemoglobin rates based on Ballon model. This part needs to be feed using the Neurodynamics states. "Hey Mario, How I can use it?" Here you have. 
   ```
   % Outputs; qj = rate HbR, and HbT Rate HbT 
-  % Inputs; Z = Neurodynamics, U = Stimuli, P_SD = Priory values (Using now the estimated by S.Tak), A = Latent connectivity ,and  step = Integration step.
+  % Inputs; Z = Neurodynamics, U = Stimuli, P_SD = Priory values (Using now the estimated by S.Tak), A = Latent connectivity                               
+  %        ,and  step =  integration step.
+  
   [qj,pj] = BilinearModel_Hemodynamics_Naive_v2(Z, U, P_SD, A, Step)
   ```
-  
+  <p align="center">
+    <img width="470" src="/Images/M1_Hemo.png">
+    <img width="470" src="/Images/SMA_Hemo.png">
+  </p>
