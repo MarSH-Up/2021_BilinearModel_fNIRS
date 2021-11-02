@@ -20,6 +20,6 @@ The model is composed of three stages:
 The following describes a big picture of the equations that represent the model. All the rights are for S.Tak. I took the diagram from his paper. 
 
 <p align="center">
-  <img width="500" src="/Images/2021_BilinearModel.PNG">
+  <img width="470" src="/Images/2021_BilinearModel.PNG">
 </p>
 
