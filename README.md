@@ -15,3 +15,7 @@ The model is composed of three stages:
 1. Neurodynamics; Neuronal activity in terms of inter-regional interactions.
 2. Hemodynamics; Linking neural activity with the changes in total hemoglobin and deoxyhemoglobin. (The model follows the Ballon Model, Friston, et al. 2000). 
 3. Optics; The model relates the Hemodynamic sources to optical density changes. (This part needs more love). 
+
+
+The following describes a big picture of the equations that represent the model. All the rights are for S.Tak. I took the diagram from his paper. 
+![BL](/Images/2021_BilinearModel.PNG)
