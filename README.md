@@ -54,7 +54,7 @@ The code (kind of) follows the OOPs philosophy, and of course, it can be improve
 
 3. Hemodynamics;Total Hemoglobin and deoxyhemoglobin rates based on Ballon model. This part needs to be feed using the Neurodynamics states. "Hey Mario, How I can use it?" Here you have. 
   ```
-  % Outputs; qj = rate HbR, and HbT Rate HbT 
+  % Outputs; qj = rate HbR,and pj = Rate HbT.
   % Inputs; Z = Neurodynamics, U = Stimuli, P_SD = Priory values (Using now the estimated by S.Tak), A = Latent connectivity                               
   %        ,and  step =  integration step.
   
@@ -69,4 +69,11 @@ NOTE: This images are the transformation of the rates to actual values, based-on
     <img width="230" src="/Images/Hemo_transform.png">
   </p>
   
-4.Optics; optical density changes relating to hemodynamic sources generate on the hemodynamics function. We have a chain of things, We know. Also, we are still working on this function, which mainly tends to show negative optical values, considering that this model doesn't should considerer external luminescence, so we are working on that. 
+4.Optics; optical density changes relating to hemodynamic sources generate on the hemodynamics function. We have a chain of things, We know. Also, we are still working on this function, which mainly tends to show negative optical values. This model doesn't should considerer external luminescence, so we are working on that. 
+  ```
+  % Outputs; Y = Optical Density Changes
+  % Inputs; qj = rate HbR, pj = Rate HbT, U = Stimulus, A = Latent connectivity, and Noise = noise, lol (We are trying to recreate the fnirs
+  %     outputs, so that's why we include noise here. The value range is from 0 to 1, 0 will not have noise, and one will give you a challenge.) 
+  
+  [Y] = BilinearModel_Optics_Naive(pj, qj, U, A, Noise)
+  ```
