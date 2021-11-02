@@ -43,7 +43,7 @@ Y_R2 = zeros(nRegions, simulationLength);
 %Based on: Giannoni, L., Lange, F., & Tachtsidis, I. (2020). Investigation of the quantification 
 % of hemoglobin and cytochrome-c-oxidase in the exposed cortex with near-infrared hyperspectral imaging: 
 % a simulation study. Journal of biomedical optics, 25(4), 046001.
-F_P =[(0.0007358251*7.5) (0.001104714*6.5);(0.001159306*7.5) (0.0007858993*6.5)]; 
+F_P =[(0.0007358251*7.5) (0.001104714*6.5) ; (0.001159306*7.5) (0.0007858993*6.5)]; 
 %735.8251 1104.715  = 780nm
 %1159.306 785.8993 = 850nm
 %disp(cond(F_P));
@@ -65,6 +65,7 @@ F_P =[(0.0007358251*7.5) (0.001104714*6.5);(0.001159306*7.5) (0.0007858993*6.5)]
         Y_R2(:,t) = F_P * dhq_r2;
     end
     
+    %Just plotting
     noiseSigma = Noise * Y_R1;
     noise = noiseSigma .* randn(1, length(Y_R1));
     Y_R1 = Y_R1 + noise;
@@ -87,7 +88,6 @@ F_P =[(0.0007358251*7.5) (0.001104714*6.5);(0.001159306*7.5) (0.0007858993*6.5)]
     xlabel('Time (Seconds)');
     shg;
 
-
     figure
     plot(transpose(M1), 'LineWidth', 4);
     title('M1 Heamoglobin Concentration');
@@ -103,7 +103,7 @@ F_P =[(0.0007358251*7.5) (0.001104714*6.5);(0.001159306*7.5) (0.0007858993*6.5)]
     xlabel('Time (Seconds)');
     shg;
     
-    
+    %Bulding the return
     Y = [Y_R1; Y_R2];
 end
 
