@@ -1,4 +1,4 @@
-function [Sj, Vj, qj,pj] = BilinearModel_Hemodynamics_Naive_v2(Z, U, P_SD, A, Step)
+function [qj,pj] = BilinearModel_Hemodynamics_Naive_v2(Z, U, P_SD, A, Step)
 %% Version V4
 % Authors - Mario De Los Santos, Felipe Orihuela-Espina, Javier Herrara-Vega
 % Date - October 19th, 2021
