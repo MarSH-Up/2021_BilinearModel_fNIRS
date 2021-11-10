@@ -1,4 +1,4 @@
-function [Y] = BilinearModel_Optics_Naive(pj, qj, U, A, Noise)
+function [Y] = BilinearModel_Optics_Naive_v2(pj, qj, U, A, Noise)
 %% Version V1
 % Authors - Mario De Los Santos, Felipe Orihuela-Espina, Javier Herrara-Vega
 % Date - October, 2021
