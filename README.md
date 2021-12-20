@@ -83,10 +83,29 @@ NOTE: This images are the transformation of the rates to actual values, based-on
     <img width="470" src="/Images/M1_Optics.png">
     <img width="470" src="/Images/SMA_Optics.png">
   </p>
+  
 ## Using the Bilinear Model on Simulink
 
 We base the model on the code shown before. The difference is that we use the State-Space method to represent each equation natively on Simulink to optimize the system. We need that because even this is one of the fundamental parts of our Neurofeedback model (you can find that repository too on my profile). So State-space method, you take an nth order ODE and represent it with a single first-order matrix, and you can see it as: 
 
 <p align="center">
-  <img width="470" src="/Images/State-space.PNG">
+  <img width="470" src="/Images/State-space.png">
 </p>
+
+Then, once you represent your model, you can quickly transfer it to a block control diagram, so following:  
+
+<p align="center">
+  <img width="470" src="/Images/State-space-block.png">
+</p>
+
+And taking Neurodynamics as an example, you will get something like: 
+
+<p align="center">
+  <img width="470" src="/Images/State-space-Z.png">
+</p>
+
+Notice the green rectangle; we keep that as a code block to implement an equation later there. Neurodynamics loos easy, but the complete model is a little more complex; the following image is the state-space model of the hemodynamics part.
+
+<p align="center">
+  <img width="470" src="/Images/State-space-hemo.png">
+</p> 
