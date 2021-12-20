@@ -104,12 +104,14 @@ And taking Neurodynamics as an example, you will get something like:
   <img width="670" src="/Images/State-space-Z.png">
 </p>
 
-Notice the green rectangle; we keep that as a code block to implement an equation later there. Neurodynamics loos easy, but the complete model is a little more complex; the following image is the state-space model of the hemodynamics part.
+Notice the green rectangle; we keep that as a code block to implement an equation later. Neurodynamics loos easy, but the complete model is a little more complex; the following image is the state-space model of the hemodynamics part.
 
 <p align="center">
   <img width="670" src="/Images/State-space-hemo.png">
 </p> 
+## MODEL TO FNIRS
 
+It is necessary to add multiple noise modules to have a realistic fNIRS signal to work with it as a synthetic fNIRS generator. Then, you must process it, obtain the hemodynamics, and do all your magic. 
 
 ## References
 - Tak, S., Kempny, A., Friston, K. J., Leff, A. P., & Penny, W. D. (2015). Dynamic causal modelling for functional near-infrared spectroscopy. Neuroimage, 111, 338-349.
