@@ -109,3 +109,8 @@ Notice the green rectangle; we keep that as a code block to implement an equatio
 <p align="center">
   <img width="670" src="/Images/State-space-hemo.png">
 </p> 
+
+
+## References
+- Tak, S., Kempny, A., Friston, K. J., Leff, A. P., & Penny, W. D. (2015). Dynamic causal modelling for functional near-infrared spectroscopy. Neuroimage, 111, 338-349.
+- Friston, K. J., Harrison, L., & Penny, W. (2003). Dynamic causal modelling. Neuroimage, 19(4), 1273-1302.
