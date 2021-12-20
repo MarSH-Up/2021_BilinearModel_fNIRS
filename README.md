@@ -109,7 +109,8 @@ Notice the green rectangle; we keep that as a code block to implement an equatio
 <p align="center">
   <img width="670" src="/Images/State-space-hemo.png">
 </p> 
-## MODEL TO FNIRS
+
+## A realistic fNIRS data generator
 
 It is necessary to add multiple noise modules to have a realistic fNIRS signal to work with it as a synthetic fNIRS generator. Then, you must process it, obtain the hemodynamics, and do all your magic. 
 
