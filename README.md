@@ -101,11 +101,11 @@ Then, once you represent your model, you can quickly transfer it to a block cont
 And taking Neurodynamics as an example, you will get something like: 
 
 <p align="center">
-  <img width="470" src="/Images/State-space-Z.png">
+  <img width="670" src="/Images/State-space-Z.png">
 </p>
 
 Notice the green rectangle; we keep that as a code block to implement an equation later there. Neurodynamics loos easy, but the complete model is a little more complex; the following image is the state-space model of the hemodynamics part.
 
 <p align="center">
-  <img width="470" src="/Images/State-space-hemo.png">
+  <img width="670" src="/Images/State-space-hemo.png">
 </p> 
