@@ -116,7 +116,7 @@ It is necessary to add multiple noise modules to have a realistic fNIRS signal t
 
 ## Commit changes
 
-- January, 2023: Incorporation of a first implementation of dynamic connectivity based-on the control response and a threshold. Function creates a random parameter for the connectivity on M1, must add SMA too, but for now probes the concept. How to use it? Change Neurodynamics function for the following on your Testing script. (Make sure BilinearModel_DynamicB.m is in the same folder) 
+- January 2023: Incorporation of the first implementation of dynamic connectivity based on the control response and a threshold. The function creates a random parameter for the connectivity on M1 and must add SMA too, but it probes the concept for now. How to use it? Change the Neurodynamics function for the following on your Testing script. (Make sure BilinearModel_DynamicB.m is in the same folder)
 
   ```
   % Outputs; Z = Neurodynamics. Sized <nRegions x simulationLength> (Carefull with the nRegions, check the paper :D)
