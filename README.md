@@ -114,6 +114,18 @@ Notice the green rectangle; we keep that as a code block to implement an equatio
 
 It is necessary to add multiple noise modules to have a realistic fNIRS signal to work with it as a synthetic fNIRS generator. Then, you must process it, obtain the hemodynamics, and do all your magic. 
 
+## Commit changes
+
+- January, 2023: Incorporation of a first implementation of dynamic connectivity based-on the control response and a threshold. Function creates a random parameter for the connectivity on M1, must add SMA too, but for now probes the concept. How to use it? Change Neurodynamics function for the following on your Testing script. (Make sure BilinearModel_DynamicB.m is in the same folder) 
+
+  ```
+  % Outputs; Z = Neurodynamics. Sized <nRegions x simulationLength> (Carefull with the nRegions, check the paper :D)
+  % Inputs; A = Latent connectivity. Square matrix. Sized <nRegions x nRegions>, B = Induced connectivity, Square matrix. Sized <nRegions x nRegions x         %         nStimulus>, C = Extrinsic influences of inputs on neuronal activity, U = Stimuli. Sized <nStimuli x nTimeSamples> (Previous function), and 
+  %         step = Integration step (h using Euler Method, consider that we need to validate the h with mathematical rigor, We will update next months). 
+
+  [Z] = BilinearModel_Neurodynamics_B(A, B, C, U, step)
+  ```
+
 ## References
 - Tak, S., Kempny, A., Friston, K. J., Leff, A. P., & Penny, W. D. (2015). Dynamic causal modelling for functional near-infrared spectroscopy. Neuroimage, 111, 338-349.
 - Friston, K. J., Harrison, L., & Penny, W. (2003). Dynamic causal modelling. Neuroimage, 19(4), 1273-1302.
